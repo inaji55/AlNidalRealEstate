@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alnidal | Real State</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="Images/AlNidal Logo.png" alt="Alnidal Logo">
+        </a>
+        <div class="menu-btn" id="mobile-toggle"><i class="fas fa-bars"></i></div>
+        <div class="nav-links" id="nav-menu">
+            <a href="index.html" class="active-link" style="text-align: center;">Home</a>
+            <a href="old-projects.html"style="text-align: center;">Old Projects</a>
+            <a href="current-project.html"style="text-align: center;">Current Project</a>
+            <a href="upcoming.html"style="text-align: center;">Upcoming</a>
+            <a href="about.html"style="text-align: center;">About Us</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div>
+            <h2 class="project-title" style="text-align: center;">AlNidal Real Estate</h2>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="Images/Home/001.jpg"></div>
+                <div class="swiper-slide"><img src="Images/Home/004.jpg"></div>
+                <div class="swiper-slide"><img src="Images/Home/003.jpg"></div>
+                <div class="swiper-slide"><img src="Images/Home/005.jpg"></div>
+              
+                
+            </div>
+            <div class="swiper-button-next" style="color: var(--gold)"></div>
+            <div class="swiper-button-prev" style="color: var(--gold)"></div>
+        </div>
+
+        <section class="vision-section" style="margin-bottom: 120px;">
+            <div class="middle-logo-box" style="width: 250px; height: 250px;">
+                <img src="Images/AlNidal Logo.png" alt="Alnidal Brand" >            
+            </div>
+            <div class="vision-content">
+                <h2>Our Vision</h2>
+                <p>
+                    Redefining urban elegance through architectural precision. 
+                    We build more than structures; we build legacies of 
+                    modern luxury and comfort.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div style="color: #444; font-size: 0.7rem; letter-spacing: 1px;">CONTACT US</div>
+        
+        <a href="tel:059-971-1600" class="footer-contact">059-971-1600</a>
+        <div class="footer-socials">
+            <a href="https://www.facebook.com/share/16ubVF2GBz/"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Carousel Script
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: { delay: 4000 },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+
+        // Mobile Menu Toggle Fix
+        const toggleBtn = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        toggleBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            // Changes icon from bars to X when active
+            const icon = toggleBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+    </script>
+</body>
+</html>
