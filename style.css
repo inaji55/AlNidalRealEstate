@@ -485,6 +485,14 @@ footer {
     gap: 10px;
     justify-content: center;
 }
+.detail-item-2 {
+    font-size: 3rem;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
 
 .detail-item i {
     color: var(--gold);
