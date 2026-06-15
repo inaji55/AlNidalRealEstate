@@ -96,6 +96,14 @@ nav {
     margin-bottom: 20px;
 }
 
+.swiper-2 { 
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 4 / 3; /* Standard architectural ratio */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
 .swiper-slide img { 
     width: 100%; 
     height: 100%; 
@@ -226,6 +234,14 @@ footer {
     margin-bottom: 25px;
     font-size: 1.5rem;
 }
+.project-title-2 {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    margin-top: -20px;
+    font-size: 1.5rem;
+}
 
 /* Fixed to 3:4 Aspect Ratio */
 .static-image {
@@ -349,6 +365,14 @@ footer {
     border: 1px solid var(--grey);
 }
 
+.video-container-2 {
+    width: 100%;
+    aspect-ratio: 9 / 16; /* Cinematic wide ratio */
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--grey);
+}
+
 .media-section iframe {
     width: 100%;
     height: 100%; /* Now fills the 16:9 container perfectly */
@@ -373,6 +397,20 @@ footer {
     width: 100%;
     height: 100%;
 }
+
+.video-wrapper-2 {
+    width: 100%;
+    aspect-ratio: 9 / 16; /* أبعاد طولية مباشرة */
+    border-radius: 8px;
+    border: 1px solid var(--grey);
+    overflow: hidden;
+}
+
+.video-wrapper-2 iframe {
+    width: 100%;
+    height: 100%;
+}
+
 /* 1. Add space at the bottom of the site so content isn't covered */
 body {
     padding-bottom: 80px; 
@@ -578,4 +616,41 @@ footer {
     .nav-back-container {
         display: flex !important; /* إجبار رابط العودة على الظهور */
     }
+}
+
+/* تنسيق السلايد ليجبر أي محتوى داخله على السنترة الكاملة */
+.swiper-slide.video-slide {
+    display: flex;
+    justify-content: center; /* توسيط أفقياً */
+    align-items: center;     /* توسيط عمودياً */
+    width: 100%;
+    height: 100%;            /* يأخذ كامل ارتفاع السلايدر المتوفر */
+    background: #000;        /* خلفية سوداء اختيارية خلف الفيديو لكي لا تظهر أطراف بيضاء */
+}
+
+/* تنسيق الـ iframe ليعرض بالعرض ويكون متجاوباً */
+.swiper-slide.video-slide iframe {
+    width: 100%;
+    max-width: 800px;        /* يمكنك التحكم في أقصى عرض للفيديو من هنا */
+    aspect-ratio: 16 / 9;    /* يضمن بقاء الفيديو بالعرض دائمًا */
+    border-radius: 8px;      /* زوايا دائرية خفيفة */
+    border: none;
+}
+
+.swiper-slide-2.video-slide-2 {
+    display: flex;
+    justify-content: center; /* توسيط أفقياً */
+    align-items: center;     /* توسيط عمودياً */
+    width: 100%;
+    height: 100%;            /* يأخذ كامل ارتفاع السلايدر المتوفر */
+    background: #000;        /* خلفية سوداء اختيارية خلف الفيديو لكي لا تظهر أطراف بيضاء */
+}
+
+/* تنسيق الـ iframe ليعرض بالعرض ويكون متجاوباً */
+.swiper-slide-2.video-slide-2 iframe {
+    /* width: 100%; */
+    max-width: 400px;        /* يمكنك التحكم في أقصى عرض للفيديو من هنا */
+    aspect-ratio: 9 / 16;    /* يضمن بقاء الفيديو بالعرض دائمًا */
+    border-radius: 8px;      /* زوايا دائرية خفيفة */
+    border: none;
 }
